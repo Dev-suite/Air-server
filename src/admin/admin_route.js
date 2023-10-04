@@ -12,8 +12,8 @@ const AuthorizedAdmin = require("../middleware/admin_middleware.js");
 const { getLoggedInUser } = require("../utils/helper.js");
 
 // auth
-// router.post("/create-admin", AuthorizedAdmin, createAdmin);
-router.post("/create-admin", createAdmin);
+router.post("/create-admin", AuthorizedAdmin, createAdmin);
+// router.post("/create-admin", createAdmin);
 router.post("/login", login);
 router.get("/get-me", AuthorizedAdmin, getLoggedInUser);
 router.post("/logout", AuthorizedAdmin, logout);
